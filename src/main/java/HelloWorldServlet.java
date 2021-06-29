@@ -7,6 +7,9 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
+
+    public int counter;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
@@ -18,7 +21,8 @@ public class HelloWorldServlet extends HttpServlet {
             name = "World";
         }
 
-        out.println("<h1>Hello " + name + "!</h1>");
+        out.println("<h1>Hello " + name + "!</h1>" + counter);
+        counter++;
 
     }
 }
