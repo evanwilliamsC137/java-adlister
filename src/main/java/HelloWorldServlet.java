@@ -21,7 +21,7 @@ public class HelloWorldServlet extends HttpServlet {
             name = "World";
         }
 
-        out.println("<h1>Hello " + name + "!</h1>" + counter);
+        out.println("<h1>Hello " + name + "!</h1>" + "<h2>View counter " + counter + "<h2>");
         counter++;
 
     }
